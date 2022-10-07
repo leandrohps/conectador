@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>O Conectador!</title>
+</head>
+
+<body>
+    <div class="popwindow">
+        <h2>Bem vindo ao Conectador!</h2>
+        <p>No Conectador você cria pontos ao clicar em qualquer lugar na tela dentro da margem.
+            Utilize os botões acima para conectar os pontos com linhas e interagir com sua criação!</p>
+        <button class="btn close">Vamos lá!</button>
+    </div>
+    <section class="cabeçalho">
+        <button class="btn" onclick="reset()">Reset</button>
+        <button class="btn" onclick="apagarPontos()">Apagar pontos</button>
+        <button class="btn" onclick="apagarLinhas()">Apagar linhas</button>
+        <button class="btn" onclick="apagar()">-1</button>
+        <button class="btn" onclick="conectarTodos()">Conectar todos</button>
+        <div class="wrapper">
+            <button class="hoverParent btn" onclick="conectar1()">Conectar
+                <div class="popup">
+                    <input class="checkbox" type="checkbox" id="lastFirst" name="checkbox">
+                    <label for="lastFirst">Fechar conexão</label>
+                </div>
+            </button>
+        </div>
+        <div class="slideContainer">
+            Tamanho das linhas:
+            <input type="range" min="1" max="5" value="1" step="1" class="slider rangeSlider" id="myRange">
+        </div>
+    </section>
+
+    <section class="pontos">
+        <div id="canvas"></div>
+    </section>
+
+</body>
+
+</html>
+
+<script src="index.js"></script>
